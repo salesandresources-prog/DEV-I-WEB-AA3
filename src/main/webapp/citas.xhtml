@@ -44,26 +44,26 @@
                 <h:form id="formCita">
                     <h:messages globalOnly="true" styleClass="mensaje-error" />
                     
-                    <h:inputText id="nombre" value="#{citasController.clienteNombre}" 
-                                 placeholder="Nombre del cliente" required="true"
+                    <h:outputLabel value="Nombre del cliente:" for="nombre" style="color: #ccc; font-size: 12px; display: block; margin-bottom: 3px;" />
+                    <h:inputText id="nombre" value="#{citasController.clienteNombre}" required="true"
                                  requiredMessage="Ingrese el nombre del cliente" />
                     
-                    <h:inputText id="correo" value="#{citasController.correo}" 
-                                 placeholder="Correo electronico" />
+                    <h:outputLabel value="Correo electronico:" for="correo" style="color: #ccc; font-size: 12px; display: block; margin-bottom: 3px;" />
+                    <h:inputText id="correo" value="#{citasController.correo}" />
                     
-                    <h:inputText id="telefono" value="#{citasController.telefono}" 
-                                 placeholder="Telefono" required="true"
+                    <h:outputLabel value="Telefono:" for="telefono" style="color: #ccc; font-size: 12px; display: block; margin-bottom: 3px;" />
+                    <h:inputText id="telefono" value="#{citasController.telefono}" required="true"
                                  requiredMessage="Ingrese el telefono" />
                     
-                    <h:inputText id="documento" value="#{citasController.documento}" 
-                                 placeholder="Documento de identidad" />
+                    <h:outputLabel value="Documento de identidad:" for="documento" style="color: #ccc; font-size: 12px; display: block; margin-bottom: 3px;" />
+                    <h:inputText id="documento" value="#{citasController.documento}" />
                     
-                    <h:inputText id="fecha" value="#{citasController.fechaCita}" 
-                                 placeholder="Fecha de cita (YYYY-MM-DD)" required="true"
+                    <h:outputLabel value="Fecha de cita (YYYY-MM-DD):" for="fecha" style="color: #ccc; font-size: 12px; display: block; margin-bottom: 3px;" />
+                    <h:inputText id="fecha" value="#{citasController.fechaCita}" required="true"
                                  requiredMessage="Ingrese la fecha de la cita" />
                     
-                    <h:inputTextarea id="descripcion" value="#{citasController.descripcion}" 
-                                     placeholder="Descripcion o notas de la cita" rows="3" />
+                    <h:outputLabel value="Descripcion o notas de la cita:" for="descripcion" style="color: #ccc; font-size: 12px; display: block; margin-bottom: 3px;" />
+                    <h:inputTextarea id="descripcion" value="#{citasController.descripcion}" rows="3" />
                     
                     <h:commandButton value="GUARDAR CITA" action="#{citasController.guardar}" 
                                      styleClass="boton-sencillo" />
