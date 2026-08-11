@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <title>Recuperar Contrasena - DEV-I 2.0</title>
+        <h:outputStylesheet name="css/estilos.css" />
+    </h:head>
+    <h:body>
+        <div class="contenedor-principal">
+            <h:form class="caja-formulario">
+                <h2>Recuperar Contrasena</h2>
+                
+                <h:messages globalOnly="true" styleClass="mensaje-error" />
+                
+                <div class="campo">
+                    <h:outputLabel value="Ingrese su nombre de usuario:" for="recUser" />
+                    <h:inputText id="recUser" required="true"
+                                 requiredMessage="Ingrese su usuario" />
+                </div>
+                
+                <h:commandButton value="Solicitar Recuperacion" 
+                                 styleClass="boton-sencillo" />
+                
+                <div class="enlaces-ayuda">
+                    <h:link value="Volver al inicio de sesion" outcome="login" />
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>

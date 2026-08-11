@@ -1,0 +1,6 @@
+com\mycompany\dev\i2\web\JakartaRestConfiguration.class
+com\mycompany\dev\i2\web\UsuariosController.class
+jpa\entities\Usuarios.class
+com\mycompany\dev\i2\web\resources\JakartaEE10Resource.class
+CitasController.class
+jpa\entities\Citas.class

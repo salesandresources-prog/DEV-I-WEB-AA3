@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Ingreso al Sistema - DEV-I 2.0</title>
+        <h:outputStylesheet name="css/estilos.css" />
+    </h:head>
+    <h:body>
+        <div class="contenedor-principal">
+            <h:form class="caja-formulario">
+                <h2>Ingresar al Sistema</h2>
+                
+                <!-- Mensajes de error o exito del servidor -->
+                <h:messages globalOnly="true" styleClass="mensaje-error" />
+                
+                <div class="campo">
+                    <h:outputLabel value="Usuario:" for="txtUsuario" />
+                    <h:inputText id="txtUsuario" value="#{usuariosController.usuario}" required="true" 
+                                 requiredMessage="Ingrese su usuario" />
+                </div>
+                
+                <div class="campo">
+                    <h:outputLabel value="Contrasena:" for="txtPassword" />
+                    <h:inputSecret id="txtPassword" value="#{usuariosController.password}" required="true"
+                                   requiredMessage="Ingrese su contrasena" />
+                </div>
+                
+                <h:commandButton value="Ingresar ahora" 
+                                 action="#{usuariosController.validarLogin}" 
+                                 styleClass="boton-sencillo" />
+                
+                <div class="enlaces-ayuda">
+                    <h:link value="No tienes cuenta? Registrate aqui" outcome="registro" />
+                    <h:link value="Olvidaste tu contrasena?" outcome="recuperar" />
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>

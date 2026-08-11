@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Registro - DEV-I 2.0</title>
+        <h:outputStylesheet name="css/estilos.css" />
+    </h:head>
+    <h:body>
+        <div class="contenedor-principal">
+            <h:form class="caja-formulario">
+                <h2>Crear Cuenta</h2>
+                
+                <!-- Mensajes de error del servidor -->
+                <h:messages globalOnly="true" styleClass="mensaje-error" />
+                
+                <div class="campo">
+                    <h:outputLabel value="Usuario:" for="regUser" />
+                    <h:inputText id="regUser" value="#{usuariosController.regUsuario}" required="true"
+                                 requiredMessage="Ingrese un nombre de usuario" />
+                </div>
+                
+                <div class="campo">
+                    <h:outputLabel value="Contrasena:" for="regPass" />
+                    <h:inputSecret id="regPass" value="#{usuariosController.regPassword}" required="true"
+                                   requiredMessage="Ingrese una contrasena" />
+                </div>
+                
+                <div class="campo">
+                    <h:outputLabel value="Confirmar Contrasena:" for="regConfirm" />
+                    <h:inputSecret id="regConfirm" value="#{usuariosController.regConfirmar}" required="true"
+                                   requiredMessage="Confirme su contrasena" />
+                </div>
+                
+                <h:commandButton value="Registrarse" 
+                                 action="#{usuariosController.registrarUsuario}" 
+                                 styleClass="boton-sencillo" />
+                
+                <div class="enlaces-ayuda">
+                    <h:link value="Ya tienes cuenta? Inicia sesion" outcome="login" />
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>

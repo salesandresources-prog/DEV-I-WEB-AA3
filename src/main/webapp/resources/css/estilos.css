@@ -1,0 +1,44 @@
+:root {
+    --dorado: #D4AF37;
+    --dorado-hover: #B8860B;
+    --fondo-oscuro: #121212;
+    --caja-oscura: #1a1a1a;
+    --texto-claro: #e0e0e0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { 
+    background-color: var(--fondo-oscuro) !important; 
+    color: var(--texto-claro); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.caja-formulario { 
+    background-color: var(--caja-oscura); 
+    border: 2px solid var(--dorado); 
+    border-radius: 15px; 
+    padding: 40px; 
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+h2 { color: var(--dorado); margin-bottom: 25px; text-align: center; }
+
+.boton-sencillo { 
+    width: 100%; background-color: var(--dorado); color: #000; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; margin-top: 15px; transition: all 0.3s ease;
+}
+
+.boton-sencillo:hover { background-color: var(--dorado-hover); transform: scale(1.02); box-shadow: 0 0 10px var(--dorado); }
+
+.campo { margin-bottom: 20px; }
+.campo input { width: 100%; padding: 12px; background-color: #262626; border: 1px solid #444; color: white; border-radius: 5px; }
+.campo input:focus { border-color: var(--dorado); outline: none; }
+
+.enlaces-ayuda { margin-top: 20px; text-align: center; }
+.enlaces-ayuda a { color: var(--dorado); text-decoration: none; font-size: 14px; display: block; margin-top: 8px; transition: 0.3s; }
+.enlaces-ayuda a:hover { color: white; text-decoration: underline; }
